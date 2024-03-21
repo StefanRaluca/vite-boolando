@@ -34,7 +34,7 @@ img {
     bottom: 30px;
     background-color: red;
     width: 60px;
-    color: white;
+    color: $text-color;
     font-size: 12px;
     height: 20px;
     text-align: center;
@@ -47,7 +47,7 @@ img {
     position: absolute;
     bottom: 30px;
     left: 70px;
-    color: white;
+    color: $text-color;
     width: 90px;
     text-align: center;
     height: 20px;
@@ -57,7 +57,7 @@ img {
 
 /* add favorites style */
 .hearts {
-    background-color: white;
+    background-color: $text-color;
     position: absolute;
     top: 2px;
     right: 2px;
@@ -169,7 +169,7 @@ span {
     background-color: green;
     position: absolute;
     bottom: 30px;
-    color: white;
+    color: $text-color;
     width: 90px;
     text-align: center;
     height: 20px;

@@ -1,6 +1,6 @@
 header {
     display: flex;
-    background-color: rgba(255, 105, 0, 1);
+    background-color: $primary-color-header;
     justify-content: center;
     height: 50px;
 
@@ -13,7 +13,7 @@ header {
 
         a {
             text-decoration: none;
-            color: white;
+            color: $text-color;
             margin: 0 10px;
             font-weight: bold;
         }
@@ -21,7 +21,7 @@ header {
         .left {
             width: 40%;
             font-weight: bold;
-            color: white;
+            color: $text-color;
         }
 
 
@@ -33,8 +33,8 @@ header {
         .icons {
             width: 20px;
             height: 30px;
-            fill: white;
-            stroke: white;
+            fill: $text-color;
+            stroke: $text-color;
             display: flex;
         }
 

@@ -27,5 +27,5 @@ export default {
 </template>
 
 <style lang="scss">
-@import url(./assets/main.scss);
+@import url(/src/assets/scss/main.scss);
 </style>

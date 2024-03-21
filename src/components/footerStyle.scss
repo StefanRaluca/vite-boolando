@@ -1,0 +1,49 @@
+@use "/src/assets/scss/variables" as *;
+
+ul {
+    list-style: none;
+    gap: 20px;
+    display: flex;
+
+}
+
+.container_footer {
+    background-color: $background-color-footer;
+    color: $text-color;
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+.container_footer_left {
+    h3 {
+        color: $text-color;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
+}
+
+.container_footer_right {
+    h4 {
+        color: $text-color;
+    }
+
+    .container_logo_icons {
+        display: flex;
+        gap: 10px;
+
+        a {
+            color: $text-color;
+            font-size: 20px;
+
+        }
+    }
+}

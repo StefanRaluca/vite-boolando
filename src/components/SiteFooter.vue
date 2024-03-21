@@ -21,8 +21,13 @@ export default {
         </div>
         <!-- footer right with icons -->
         <div class="container_footer_right">
-            <h5>Trovaci anche su</h5>
+            <h4>Trovaci anche su</h4>
             <div class="container_logo_icons">
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-pinterest"></i></a>
 
             </div>
 

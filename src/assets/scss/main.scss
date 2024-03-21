@@ -1,0 +1,15 @@
+@use "./variables" as *;
+
+
+/* Header Style */
+
+@import url(/src/components/headerStyle.scss);
+
+
+/* main style  */
+
+
+@import url(/src/components/mainStyle.scss);
+
+/* footer style */
+@import url(/src/components/footerStyle.scss);
