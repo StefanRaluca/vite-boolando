@@ -2,8 +2,8 @@
 import SiteHeader from './components/SiteHeader.vue';
 import SiteMain from './components/SiteMain.vue';
 import SiteFooter from './components/SiteFooter.vue';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap';
+import '@fortawesome/fontawesome-free/css/all.css';
+
 
 export default {
   components: {
@@ -26,4 +26,6 @@ export default {
   <SiteFooter />
 </template>
 
-<style></style>
+<style lang="scss">
+@import url(./assets/main.scss);
+</style>
