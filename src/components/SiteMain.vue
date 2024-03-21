@@ -10,16 +10,17 @@ export default {
 
 <template>
     <div class="container_main">
+        <!-- first section of main top -->
         <!-- first product -->
         <div class="container_products">
             <section class="products">
                 <div class="product">
-                    <img class="display_none" src="./assets/img/1.webp" alt="">
+                    <img class="display_none" src="/img/1.webp" alt="">
 
                     <div class="discount">-50%</div>
                     <div class="Sostenibilità">Sostenibilità</div>
                     <div class="hearts">&hearts;</div>
-                    <img class="display_hover" src="./assets/img/1b.webp" alt="">
+                    <img class="display_hover" src="/img/1b.webp" alt="">
                 </div>
                 <!-- text description products -->
                 <div>
@@ -34,11 +35,11 @@ export default {
         <div class="container_products">
             <section class="products">
                 <div class="product">
-                    <img class="display_none2" src="./assets/img/2.webp" alt="">
+                    <img class="display_none2" src="/img/2.webp" alt="">
 
                     <div class="discount">-30%</div>
                     <div class="hearts">&hearts;</div>
-                    <img class="display_hover_2" src="./assets/img/2b.webp" alt="">
+                    <img class="display_hover_2" src="/img/2b.webp" alt="">
                 </div>
                 <!-- text description products -->
                 <div>
@@ -54,11 +55,11 @@ export default {
         <div class="container_products">
             <section class="products">
                 <div class="product">
-                    <img class="display_none3" src="./assets/img/3.webp" alt="">
+                    <img class="display_none3" src="/img/3.webp" alt="">
 
                     <div class="discount">-30%</div>
                     <div class="hearts">&hearts;</div>
-                    <img class="display_hover_3" src="./assets/img/3b.webp" alt="">
+                    <img class="display_hover_3" src="/img/3b.webp" alt="">
                 </div>
                 <!-- text description products -->
                 <div>
@@ -76,12 +77,12 @@ export default {
         <div class="container_products">
             <section class="products">
                 <div class="product">
-                    <img class="display_none4" src="./assets/img/4.webp" alt="">
+                    <img class="display_none4" src="/img/4.webp" alt="">
 
                     <div class="discount">-50%</div>
                     <div class="Sostenibilità">Sostenibilità</div>
                     <div class="hearts">&hearts;</div>
-                    <img class="display_hover" src="./assets/img/4b.webp" alt="">
+                    <img class="display_hover" src="/img/4b.webp" alt="">
                 </div>
                 <!-- text description products -->
                 <div>
@@ -96,10 +97,10 @@ export default {
         <div class="container_products">
             <section class="products">
                 <div class="product">
-                    <img class="display_none5" src="./assets/img/5.webp" alt="">
+                    <img class="display_none5" src="/img/5.webp" alt="">
 
                     <div class="hearts">&hearts;</div>
-                    <img class="display_hover_2" src="./assets/img/5b.webp" alt="">
+                    <img class="display_hover_2" src="/img/5b.webp" alt="">
                 </div>
                 <!-- text description products -->
                 <div>
@@ -114,10 +115,10 @@ export default {
         <div class="container_products">
             <section class="products">
                 <div class="product">
-                    <img class="display_none6" src="./assets/img/6.webp" alt="">
+                    <img class="display_none6" src="/img/6.webp" alt="">
                     <div class="Sostenibilità_end">Sostenibilità</div>
                     <div class="hearts">&hearts;</div>
-                    <img class="display_hover_3" src="./assets/img/6b.webp" alt="">
+                    <img class="display_hover_3" src="/img/6b.webp" alt="">
                 </div>
                 <!-- text description products -->
                 <div>
