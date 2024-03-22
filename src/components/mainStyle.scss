@@ -34,10 +34,10 @@ img {
 .discount {
     position: absolute;
     bottom: 30px;
-    background-color: red;
+    background-color: $discount-color;
     width: 60px;
     color: $text-color;
-    font-size: 12px;
+    font-size: 15px;
     height: 20px;
     text-align: center;
 
@@ -45,7 +45,7 @@ img {
 
 /* style of green tast */
 .Sostenibilità {
-    background-color: $sostenibilità-color;
+    background-color: $sostenibilita-color;
     position: absolute;
     bottom: 30px;
     left: 70px;
@@ -68,6 +68,17 @@ img {
     text-align: center;
 }
 
+.red-heart {
+    color: $discount-color;
+    font-size: 23px;
+
+}
+
+.heartColor {
+    font-size: 23px;
+
+}
+
 /* style text description product */
 
 span {
@@ -77,7 +88,7 @@ span {
 }
 
 .price_now {
-    color: red;
+    color: $discount-color;
     font-weight: bold;
 }
 
@@ -86,85 +97,24 @@ span {
     margin: 5px;
 }
 
-/* style hover first img */
-
-.display_hover {
-    display: none;
+/* style hover  */
+.img-container {
+    position: relative;
+    width: fit-content;
 }
 
-.products:hover .display_none {
+.display_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: none;
 }
 
 .product:hover .display_hover {
-    display: inline;
-
+    display: block;
 }
 
-/* style hover second img */
-.display_hover_2 {
-    display: none;
-}
 
-.products:hover .display_none2 {
-    display: none;
-}
-
-.product:hover .display_hover_2 {
-    display: inline;
-}
-
-/* style hover 3 img */
-.display_hover_3 {
-    display: none;
-}
-
-.products:hover .display_none3 {
-    display: none;
-}
-
-.product:hover .display_hover_3 {
-    display: inline;
-}
-
-/* style hover 4 img */
-.display_hover_4 {
-    display: none;
-}
-
-.products:hover .display_none4 {
-    display: none;
-}
-
-.product:hover .display_hover_4 {
-    display: inline;
-}
-
-/* style hover 5 img */
-.display_hover_5 {
-    display: none;
-}
-
-.products:hover .display_none5 {
-    display: none;
-}
-
-.product:hover .display_hover_5 {
-    display: inline;
-}
-
-/* style hover 6 img */
-.display_hover_6 {
-    display: none;
-}
-
-.products:hover .display_none6 {
-    display: none;
-}
-
-.product:hover .display_hover_6 {
-    display: inline;
-}
 
 .Sostenibilità_end {
 
