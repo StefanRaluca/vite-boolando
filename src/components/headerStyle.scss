@@ -1,3 +1,5 @@
+@use "/src/assets/scss/variables" as *;
+
 header {
     display: flex;
     background-color: $primary-color-header;

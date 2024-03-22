@@ -1,3 +1,5 @@
+@use "/src/assets/scss/variables" as *;
+
 .container_main {
     display: flex;
 
@@ -43,7 +45,7 @@ img {
 
 /* style of green tast */
 .Sostenibilità {
-    background-color: green;
+    background-color: $sostenibilità-color;
     position: absolute;
     bottom: 30px;
     left: 70px;
