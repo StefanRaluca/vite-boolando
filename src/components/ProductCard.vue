@@ -1,40 +1,46 @@
 <script>
 export default {
     props: {
-        products: {
-            type: Array,
+        product: {
+            type: Object,
             required: true
         }
     },
     data() {
         return {
-            hover: new Array(this.products.length).fill(false)
+            hover: false
         };
+    },
+    methods: {
+        favoriteProduct(product) {
+            product.favorite = !product.favorite;
+        }
     }
 }
 </script>
 
 <template>
-    <div>
-        <div v-for="(product, i) in products" class="container_products">
-            <section class="products">
-                <div class="product" @mouseenter="hover[i] = true" @mouseleave="hover[i] = false">
-                    <div class="img-container">
-                        <img :src="(`${product.frontImage}`)" alt="">
-                        <img class="display_hover" :src="(`${product.backImage}`)" alt="" v-if="hover[i]">
-                    </div>
-
-                    <span class="hearts">{{ product.hearts }}</span>
-
+    <div class="container_products">
+        <section class="products">
+            <div class="product" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="img-container">
+                    <img :src="product.imgSrc" alt="">
+                    <img class="display_hover" :src="product.imgSrc.replace('.webp', 'b.webp')" alt="" v-if="hover">
                 </div>
-                <div>
-                    <span>{{ product.brand }}</span>
-                    <h5>{{ product.name }}</h5>
-                    <span class="price_now">{{ product.price }}</span>
-                    <span class="discount">{{ product.discount }}</span>
+                <div v-if="product.discount" class="discount">{{ product.discount }}</div>
+                <div v-if="product.sostenibilita" class="Sostenibilità">{{ product.sostenibilita }}</div>
+                <div class="hearts" @click="favoriteProduct(product)">
+                    <span
+                        :class="{ 'fas fa-heart': product.favorite, 'far fa-heart': !product.favorite, 'red-heart': product.favorite, 'heartColor': !product.favorite }"></span>
                 </div>
-            </section>
-        </div>
+            </div>
+            <div>
+                <span>{{ product.brand }}</span>
+                <h5>{{ product.title }}</h5>
+                <span class="price_now">{{ product.priceNow }}</span>
+                <span class="price_before">{{ product.priceBefore }}</span>
+            </div>
+        </section>
     </div>
 </template>
 
