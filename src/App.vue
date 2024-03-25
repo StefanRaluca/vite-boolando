@@ -4,6 +4,7 @@ import SiteMain from './components/SiteMain.vue';
 import SiteFooter from './components/SiteFooter.vue';
 import '@fortawesome/fontawesome-free/css/all.css';
 import ProductCard from './components/ProductCard.vue';
+import { state } from '../state';
 
 
 export default {
@@ -12,9 +13,11 @@ export default {
     SiteMain,
     SiteFooter,
     ProductCard,
+
   },
   data() {
     return {
+      productsList: state.products
 
 
     }
@@ -25,7 +28,7 @@ export default {
 
 <template>
   <SiteHeader />
-  <SiteMain :products="products" />
+  <SiteMain :products="productsList" />
   <SiteFooter />
 
 </template>
