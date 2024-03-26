@@ -32,7 +32,7 @@ export default {
                     <img class="display_hover" :src="product.imgSrc.replace('.webp', 'b.webp')" alt="" v-if="hover">
                 </div>
                 <!-- fa event -->
-                <h5 @click="showProductDetails">{{ product.title }}</h5>
+                <h5 @click="showProductDetails" :class="{ 'clickable': product.title }">{{ product.title }}</h5>
                 <div v-if="product.discount" class="discount">{{ product.discount }}</div>
                 <div v-if="product.sostenibilita" class="Sostenibilità">{{ product.sostenibilita }}</div>
                 <div class="hearts" @click="favoriteProduct(product)">
@@ -41,8 +41,8 @@ export default {
                 </div>
             </div>
             <div>
-                <span>{{ product.brand }}</span>
-                <h5>{{ product.title }}</h5>
+                <p>{{ product.brand }}</p>
+                <!-- <h5>{{ product.title }}</h5> -->
                 <span class="price_now">{{ product.priceNow }}</span>
                 <span class="price_before">{{ product.priceBefore }}</span>
             </div>
@@ -51,4 +51,8 @@ export default {
 </template>
 
 
-<style></style>
+<style>
+.product h5 {
+    cursor: pointer;
+}
+</style>

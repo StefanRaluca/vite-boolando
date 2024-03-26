@@ -19,21 +19,13 @@ export default {
   data() {
     return {
       productsList: state.products,
-      selectedProduct: null,
-      showModal: false,
 
 
     }
 
   },
-  methods: {
-    openModal(product) {
-      this.selectedProduct = product;
-    },
-    closeModal() {
-      this.selectedProduct = null;
-    },
-  },
+
+
 }
 </script>
 
@@ -41,8 +33,7 @@ export default {
   <SiteHeader />
   <SiteMain :products="productsList" />
   <SiteFooter />
-  <!-- Show modal se e true -->
-  <ProductModal v-if="selectedProduct" :product="selectedProduct" @closeModal="closeModal" />
+
 </template>
 
 <style lang="scss">

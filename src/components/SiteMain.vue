@@ -2,23 +2,17 @@
 import ProductCard from './ProductCard.vue';
 import axios from 'axios';
 /* import { state } from '../../state' */
+import ProductModal from './ProductModal.vue';
 
 export default {
     components: {
-        ProductCard
-    },
-    props: {
-        products: {
-            type: Array,
-            required: true
-        }
+        ProductCard,
+        ProductModal,
     },
     data() {
         return {
             productList: [],
-            /*    state, */
-
-
+            selectedProduct: null,
         };
     },
     methods: {
@@ -28,13 +22,22 @@ export default {
         recoverProducts() {
             axios.get('http://localhost:3000/productsList')
                 .then(response => {
+                    // console.log('start again');
                     this.productList = response.data;
                     console.log(response.data);
                 })
                 .catch(error => {
                     console.error('Error recovering products:', error);
                 });
-        }
+        },
+        openModal(product) {
+            console.log("open", product);
+            this.selectedProduct = product;
+        },
+        // Metodo per chiudere la modale
+        closeModal() {
+            this.selectedProduct = null;
+        },
     },
     mounted() {
         this.recoverProducts();
@@ -43,12 +46,12 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="container_main">
 
-        <div class="container_main">
+        <ProductCard v-for="product in productList" :product="product" @showProductDetails="openModal" />
 
-            <ProductCard v-for="product in productList" :product="product" />
-        </div>
+        <!-- Mostra la modale solo se selectedProduct è definito -->
+        <ProductModal v-if="selectedProduct" :product="selectedProduct" @closeModal="closeModal" />
     </div>
 </template>
 
