@@ -5,6 +5,7 @@ import SiteFooter from './components/SiteFooter.vue';
 import '@fortawesome/fontawesome-free/css/all.css';
 import ProductCard from './components/ProductCard.vue';
 import { state } from '../state';
+import ProductModal from './components/ProductModal.vue';
 
 
 export default {
@@ -13,16 +14,26 @@ export default {
     SiteMain,
     SiteFooter,
     ProductCard,
-
+    ProductModal,
   },
   data() {
     return {
-      productsList: state.products
+      productsList: state.products,
+      selectedProduct: null,
+      showModal: false,
 
 
     }
 
-  }
+  },
+  methods: {
+    openModal(product) {
+      this.selectedProduct = product;
+    },
+    closeModal() {
+      this.selectedProduct = null;
+    },
+  },
 }
 </script>
 
@@ -30,7 +41,8 @@ export default {
   <SiteHeader />
   <SiteMain :products="productsList" />
   <SiteFooter />
-
+  <!-- Show modal se e true -->
+  <ProductModal v-if="selectedProduct" :product="selectedProduct" @closeModal="closeModal" />
 </template>
 
 <style lang="scss">

@@ -14,7 +14,11 @@ export default {
     methods: {
         favoriteProduct(product) {
             product.favorite = !product.favorite;
-        }
+        },
+        // fa evento quando  si clicka
+        showProductDetails() {
+            this.$emit('showProductDetails', this.product);
+        },
     }
 }
 </script>
@@ -27,6 +31,8 @@ export default {
                     <img :src="product.imgSrc" alt="">
                     <img class="display_hover" :src="product.imgSrc.replace('.webp', 'b.webp')" alt="" v-if="hover">
                 </div>
+                <!-- fa event -->
+                <h5 @click="showProductDetails">{{ product.title }}</h5>
                 <div v-if="product.discount" class="discount">{{ product.discount }}</div>
                 <div v-if="product.sostenibilita" class="Sostenibilità">{{ product.sostenibilita }}</div>
                 <div class="hearts" @click="favoriteProduct(product)">
@@ -43,7 +49,6 @@ export default {
         </section>
     </div>
 </template>
-
 
 
 <style></style>
