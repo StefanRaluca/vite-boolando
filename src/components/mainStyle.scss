@@ -57,13 +57,14 @@ img {
 /* style discount  */
 .discount {
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     background-color: $discount-color;
     width: 60px;
     color: $text-color;
     font-size: 15px;
     height: 20px;
     text-align: center;
+    left: 5px;
 
 }
 
@@ -71,7 +72,7 @@ img {
 .Sostenibilità {
     background-color: $sostenibilita-color;
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     left: 70px;
     color: $text-color;
     width: 90px;
